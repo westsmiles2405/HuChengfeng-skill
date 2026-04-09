@@ -1,5 +1,7 @@
 # 🎯 户晨风工作陪伴 — VS Code Extension
 
+[English README](./README_EN.md)
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 基于“直面问题 + 对焦推进”风格的 VS Code 陪伴插件。
@@ -11,6 +13,7 @@
 - 错误体检与简报
 - 保存彩蛋、闲置提醒
 - 今日统计（番茄 / 对话 / 保存）
+- 人设策略可配置：`hcf.personaMode` 与 `hcf.safeMode`
 
 ## 命令
 
