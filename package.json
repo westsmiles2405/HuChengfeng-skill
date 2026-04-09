@@ -1,0 +1,57 @@
+{
+  "name": "huchengfeng-companion",
+  "displayName": "户晨风工作陪伴",
+  "description": "户晨风风格的直面问题型 VS Code 陪伴插件：番茄钟、代码体检、即时问答与节奏提醒",
+  "version": "0.1.0",
+  "publisher": "huchengfeng-lab",
+  "license": "MIT",
+  "icon": "media/hcf-icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/westsmiles2405/HuChengfeng-skill.git"
+  },
+  "engines": { "vscode": "^1.85.0" },
+  "categories": ["Other"],
+  "activationEvents": ["onStartupFinished"],
+  "main": "./out/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [{ "id": "hcf-companion", "title": "户晨风", "icon": "media/hcf-icon.svg" }]
+    },
+    "views": {
+      "hcf-companion": [{ "type": "webview", "id": "hcf.chatPanel", "name": "户晨风对焦室", "icon": "media/hcf-icon.svg" }]
+    },
+    "commands": [
+      { "command": "hcf.openStage", "title": "户晨风：开麦对焦", "category": "HuChengfeng" },
+      { "command": "hcf.startPomodoro", "title": "户晨风：开始番茄钟", "category": "HuChengfeng" },
+      { "command": "hcf.stopPomodoro", "title": "户晨风：结束番茄钟", "category": "HuChengfeng" },
+      { "command": "hcf.encourageMe", "title": "户晨风：给我推进建议", "category": "HuChengfeng" },
+      { "command": "hcf.reviewWork", "title": "户晨风：体检我的代码", "category": "HuChengfeng" },
+      { "command": "hcf.finale", "title": "户晨风：今日收线", "category": "HuChengfeng" },
+      { "command": "hcf.sharpLine", "title": "户晨风：来句狠话", "category": "HuChengfeng" },
+      { "command": "hcf.cityRule", "title": "户晨风：城市标准（工作版）", "category": "HuChengfeng" },
+      { "command": "hcf.nickname", "title": "户晨风：给我一个标签", "category": "HuChengfeng" }
+    ],
+    "configuration": {
+      "title": "户晨风工作陪伴",
+      "properties": {
+        "hcf.pomodoroMinutes": { "type": "number", "default": 25, "description": "番茄钟专注时长（分钟）" },
+        "hcf.breakMinutes": { "type": "number", "default": 5, "description": "休息时长（分钟）" },
+        "hcf.enableIdleReminder": { "type": "boolean", "default": true, "description": "是否闲置提醒" },
+        "hcf.idleMinutes": { "type": "number", "default": 30, "description": "闲置多少分钟后提醒" },
+        "hcf.enableStatusBar": { "type": "boolean", "default": true, "description": "是否显示状态栏入口" }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.3.3"
+  }
+}
