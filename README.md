@@ -2,6 +2,8 @@
 
 [English README](./README_EN.md)
 
+[发布说明（Release Guide）](./RELEASE.md)
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 基于“直面问题 + 对焦推进”风格的 VS Code 陪伴插件。
